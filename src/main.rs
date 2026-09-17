@@ -20,7 +20,7 @@ fn main() {
                 result += val;
             }
             Err(_) => {
-                print!("Nan");
+                print!("NaN");
                 return;
             }
         }
