@@ -16,12 +16,12 @@ fn main() {
         }
         let output = line.parse::<u128>();
         match output {
-            Ok(val) => {
-                result += val;
-            }
-            Err(_) => {
+            Err(_) | Ok(0) => {
                 print!("NaN");
                 return;
+            }
+            Ok(val) => {
+                result += val;
             }
         }
     }
